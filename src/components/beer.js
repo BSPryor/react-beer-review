@@ -1,7 +1,15 @@
-export default function Beer() {
+export default function Beer(beer) {
   return (
     <li>
-      {/* <span>{name} {abv} {type}</span> */}
+      <div className="beerName">
+        {beer.name}
+      </div>
+      <div className="beerAbv">
+        {beer.abv} %
+      </div>
+      <div className="beerType">
+        {beer.type}
+      </div>
     </li>
   )
 }

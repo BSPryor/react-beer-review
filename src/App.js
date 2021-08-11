@@ -5,16 +5,20 @@ import List from './components/list';
 import Form from './components/form';
 
 function App() {
-  // const [beers, setBeers] = useState([])
+  const [beers, setBeers] = useState([])
 
-  // const addBeer = function(beer) {
-  //   setBeers({beers: beers.concat([beer])})
-  // }
+  const addBeer = function(beer) {
+    setBeers(beers.concat([beer]))
+  }
 
   return (
     <div>
-      <List />
-      <Form />
+      <List
+      beers={beers}
+      />
+      <Form
+        addBeer={addBeer}
+      />
     </div>
   );
 }

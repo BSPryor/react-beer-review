@@ -1,9 +1,18 @@
-import React, {useState} from "react";
 import Beer from "./beer";
 
-export default function List() {
+export default function List(props) {
+  const beersList = props.beers.map(beer => {
+    return (
+      <Beer
+      key={beer.index} 
+      beer={beer}
+      />
+    )
+  })
   return(
-    <ul></ul>
-    // <Beer key={index} index={index} beer={beer} />
+    <ul className="col-md-6 offset-md-3">
+     {beersList}
+    </ul>
+    
   )
 }
