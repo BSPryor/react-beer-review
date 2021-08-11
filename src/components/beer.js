@@ -1,14 +1,14 @@
-export default function Beer(beer) {
+export default function Beer(props) {
   return (
     <li>
       <div className="beerName">
-        {beer.name}
+        {props.beer.name}
       </div>
       <div className="beerAbv">
-        {beer.abv} %
+        {props.beer.abv} %
       </div>
       <div className="beerType">
-        {beer.type}
+        {props.beer.type}
       </div>
     </li>
   )

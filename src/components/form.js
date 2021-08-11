@@ -7,9 +7,9 @@ export default function Form({addBeer}) {
 
   const handleClick = function() {
     const beer = {
-      name: {name},
-      abv: {abv},
-      type: {type}
+      name,
+      abv,
+      type
     }
     addBeer(beer)
   }
